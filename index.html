@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Out-Source. Tech Service. To customers worldwide.</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script data-polyfil="webp">
+    ! function (e, n, A) {
+      function o(e, n) {
+        return typeof e === n
+      }
+
+      function t() {
+        var e, n, A, t, a, i, l;
+        for (var f in r)
+          if (r.hasOwnProperty(f)) {
+            if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options
+              .aliases.length))
+              for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
+            for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++) i = e[a], l = i.split("."), 1 === l
+              .length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[
+                0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-"))
+          }
+      }
+
+      function a(e) {
+        var n = u.className,
+          A = Modernizr._config.classPrefix || "";
+        if (c && (n = n.baseVal), Modernizr._config.enableJSClass) {
+          var o = new RegExp("(^|\s)" + A + "no-js(\s|$)");
+          n = n.replace(o, "$1" + A + "js$2")
+        }
+        Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className =
+          n)
+      }
+
+      function i(e, n) {
+        if ("object" == typeof e)
+          for (var A in e) f(e, A) && i(A, e[A]);
+        else {
+          e = e.toLowerCase();
+          var o = e.split("."),
+            t = Modernizr[o[0]];
+          if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr;
+          n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[
+            0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a(
+              [(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n)
+        }
+        return Modernizr
+      }
+      var s = [],
+        r = [],
+        l = {
+          _version: "3.6.0",
+          _config: {
+            classPrefix: "",
+            enableClasses: !0,
+            enableJSClass: !0,
+            usePrefixes: !0
+          },
+          _q: [],
+          on: function (e, n) {
+            var A = this;
+            setTimeout(function () {
+              n(A[e])
+            }, 0)
+          },
+          addTest: function (e, n, A) {
+            r.push({
+              name: e,
+              fn: n,
+              options: A
+            })
+          },
+          addAsyncTest: function (e) {
+            r.push({
+              name: null,
+              fn: e
+            })
+          }
+        },
+        Modernizr = function () { };
+      Modernizr.prototype = l, Modernizr = new Modernizr;
+      var f, u = n.documentElement,
+        c = "svg" === u.nodeName.toLowerCase();
+      ! function () {
+        var e = {}.hasOwnProperty;
+        f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) {
+          return n in e && o(e.constructor.prototype[n], "undefined")
+        } : function (n, A) {
+          return e.call(n, A)
+        }
+      }(), l._l = {}, l.on = function (e, n) {
+        this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () {
+          Modernizr._trigger(e, Modernizr[e])
+        }, 0)
+      }, l._trigger = function (e, n) {
+        if (this._l[e]) {
+          var A = this._l[e];
+          setTimeout(function () {
+            var e, o;
+            for (e = 0; e < A.length; e++)(o = A[e])(n)
+          }, 0), delete this._l[e]
+        }
+      }, Modernizr._q.push(function () {
+        l.addTest = i
+      }), Modernizr.addAsyncTest(function () {
+        function e(e, n, A) {
+          function o(n) {
+            var o = n && "load" === n.type ? 1 == t.width : !1,
+              a = "webp" === e;
+            i(e, a && o ? new Boolean(o) : o), A && A(n)
+          }
+          var t = new Image;
+          t.onerror = o, t.onload = o, t.src = n
+        }
+        var n = [{
+          uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
+          name: "webp"
+        }, {
+          uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
+          name: "webp.alpha"
+        }, {
+          uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
+          name: "webp.animation"
+        }, {
+          uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
+          name: "webp.lossless"
+        }],
+          A = n.shift();
+        e(A.name, A.uri, function (A) {
+          if (A && "load" === A.type)
+            for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri)
+        })
+      }), t(), a(s), delete l.addTest, delete l.addAsyncTest;
+      for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
+      e.Modernizr = Modernizr
+    }(window, document)
+  </script>
+</head>
+
+<body>
+  <section class="intro">
+    <div class="intro__upper">
+      <div class="container">
+        <header class="header">
+          <div class="header__logo">
+            <img src="img/logo.png" alt="" class="header__logo--image">
+          </div>
+        </header>
+
+        <div class="intro__title--wrapper">
+          <h1 class="intro__title">
+            Out-Source<br> Tech Service
+          </h1>
+          <h3 class="intro__subtitle">
+            Тo customers worldwide.
+          </h3>
+          <button class="intro__button">upload your cv</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+
+      <div class="about__wrapper">
+        <div class="about__background">
+          <img src="img/about-bcg.png" alt="">
+        </div>
+        <div class="about__left">
+          <h2 class="about__left--title">About</h2>
+          <h3 class="about__left--subtitle">EasyTech</h3>
+
+          <p class="about__left--text">
+            EasyTech is part of international company providing Out-Source Tech Service to customers worldwide. For the
+            past 5 years the company has expanded its activities on the market and strives to become one of the best
+            Out-Source companies in the industry. Services are provided in some of the most spoken languages in the
+            world
+            – English, Spanish, Arabic, Italian, Russian, German.
+          </p>
+        </div>
+
+        <div class="about__right">
+          <div class="about__right--top">
+            <h2 class="about__right--title">Join Us</h2>
+            <a href="#" class="about__right--top-link">More Job offers</a>
+          </div>
+
+          <div class="about__right--items">
+            <div class="about__right--item">
+              <div class="about__right--number">01 <span class="about__right--slash">/</span></div>
+
+              <div class="about__right--main">
+                <h3 class="about__right--item-title">
+                  Backoffice /Payments Specialist/
+                </h3>
+                <div class="about__right--item-body">
+                  <p class="about__right--item-text">Resolve and research undelivered payments.</p>
+                  <p class="about__right--item-text">Manage anti-money laundering (AML) and know your customer (KYC)
+                    processes.</p>
+                  <p class="about__right--item-text">Communicate with appropriate internal teams, when necessary to
+                    resolve open issues or questions.</p>
+                  <div class="about__right--item-dots">...</div>
+                </div>
+
+                <a href="#" class="about__right--link">View more</a>
+              </div>
+
+              <div class="about__right--buttons">
+                <button class="about__right--button-close"></button>
+                <button class="about__right--button-open"><img src="img/arrow.svg" alt=""></button>
+              </div>
+            </div>
+
+            <div class="about__right--item">
+              <div class="about__right--number">02 <span class="about__right--slash">/</span></div>
+
+              <div class="about__right--main">
+                <h3 class="about__right--item-title">
+                  Our Experience
+                </h3>
+                <div class="about__right--item-body">
+                  <p class="about__right--item-text">Resolve and research undelivered payments.</p>
+                  <p class="about__right--item-text">Manage anti-money laundering (AML) and know your customer (KYC)
+                    processes.</p>
+                  <p class="about__right--item-text">Communicate with appropriate internal teams, when necessary to
+                    resolve open issues or questions.</p>
+                  <div class="about__right--item-dots">...</div>
+                </div>
+
+                <a href="#" class="about__right--link">View more</a>
+              </div>
+
+              <div class="about__right--buttons">
+                <button class="about__right--button-close"></button>
+                <button class="about__right--button-open"><img src="img/arrow.svg" alt=""></button>
+              </div>
+            </div>
+
+            <div class="about__right--item">
+              <div class="about__right--number">03 <span class="about__right--slash">/</span></div>
+
+              <div class="about__right--main">
+                <h3 class="about__right--item-title">
+                  Quality Assurance / Russian-English, Spanish-English/
+                </h3>
+                <div class="about__right--item-body">
+                  <p class="about__right--item-text">Resolve and research undelivered payments.</p>
+                  <p class="about__right--item-text">Manage anti-money laundering (AML) and know your customer (KYC)
+                    processes.</p>
+                  <p class="about__right--item-text">Communicate with appropriate internal teams, when necessary to
+                    resolve open issues or questions.</p>
+                  <div class="about__right--item-dots">...</div>
+                </div>
+
+                <a href="#" class="about__right--link">View more</a>
+              </div>
+
+              <div class="about__right--buttons">
+                <button class="about__right--button-close"></button>
+                <button class="about__right--button-open"><img src="img/arrow.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stories">
+    <div class="container">
+      <div class="stories__top">
+        <div class="stories__top--wrapper">
+          <div class="stories__top--img">
+            <img src="img/stories.png" alt="">
+          </div>
+
+          <a class="stories__top--link" href="#">View more</a>
+        </div>
+      </div>
+
+      <div class="stories__items">
+        <div class="stories__item stories__item--1">
+          <div class="stories__about">
+            <div class="stories__about--top">January 24, 2022</div>
+            <p class="stories__about--title">World's largest and most liquid market</p>
+          </div>
+        </div>
+
+        <div class="stories__item stories__item--2">
+          <div class="stories__about">
+            <div class="stories__about--top">Services</div>
+            <p class="stories__about--title">Hiring the best trading educators</p>
+          </div>
+        </div>
+
+        <div class="stories__item stories__item--3">
+          <div class="stories__about">
+            <div class="stories__about--top">Careers</div>
+            <p class="stories__about--title">Be part of All New Investments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="contact__wrapper">
+        <div class="contact__left">
+          <div class="contact__left--title">
+            Get in Touch with us
+          </div>
+
+          <div class="contact__left--body">
+            <p class="contact__left--text">
+              at EasyTech, we value our customers and appreciate hearing how we can improve and better support you.
+            </p>
+            <p class="contact__left--text">
+              If you have any question, do not hesitate to contact us!
+            </p>
+            <span class="contact__left--devider"></span>
+            <p class="contact__left--text">
+              Sofia, ul.“Okolovrasten pat” 251 G, 1715 g.k. Mladost 4
+            </p>
+            <a class="contact__left--link" href="mailto:info@easytech.com">info@easytech.com</a>
+            <span class="contact__left--tel">+359 02 426 36 48</span>
+          </div>
+        </div>
+
+        <div class="contact__right">
+          <form class="form">
+            <div class="form__inputs">
+              <div class="form__input">
+                <label class="form__placeholder" for="firstName">First Name <span
+                    class="form__placeholder--star">*</span></label>
+                <input class="input" type="text" name="firstName" id="firstName" required>
+              </div>
+
+              <div class="form__input">
+                <label class="form__placeholder" for="lastName">Last Name <span
+                    class="form__placeholder--star">*</span></label>
+                <input class="input" type="text" name="lastName" id="lastName" required>
+              </div>
+
+              <div class="form__input">
+                <label class="form__placeholder" for="phone">Phone <span
+                    class="form__placeholder--star">*</span></label>
+                <input class="input" type="tel" name="phone" id="phone" required>
+              </div>
+
+              <div class="form__input">
+                <label class="form__placeholder" for="mail">Email <span class="form__placeholder--star">*</span></label>
+                <input class="input" type="email" name="mail" id="mail" required>
+              </div>
+            </div>
+
+
+            <div class="form__message">
+              <label class="form__placeholder message" for="message">Your Message <span
+                  class="form__placeholder--star">*</span></label>
+              <textarea class="input" name="message" id="message" required></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__ad">
+          <img class="footer__ad--image" src="img/megaphone.png" alt="">
+          <p class="footer__text">
+            Never miss Another opportunity
+          </p>
+        </div>
+
+        <button class="footer__button">Create a Job alert</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
